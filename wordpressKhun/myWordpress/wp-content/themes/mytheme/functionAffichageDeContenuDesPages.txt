@@ -1,0 +1,20 @@
+Fonctions d'affichage du contenu des pages/articles de wordpress
+
+the_title() //afficher le titre
+the_content() // permet d'afficher le contenu 
+the_date() //permet d'afficher la date de la création
+the_ID() // permet d'afficher l'id de la page. C'est pas nous qui l'a définissons, c'est la base de donnée qui l'a fournit.
+the_author() //afficher l'auteur
+the_post_thumbnail() //afficher l'image mise en avant 
+the_permalink([qualité de l'image(post-thumbnail/medium/large)]) // permet d'afficher le lien vers la page ou l'article. 
+the_excerpt() // affiche l'extrait (ou résumé). Il y a un nombre de lettre définit, mais possible de l'ajouter.
+//il y a encore d'autre dans la doc wordpress
+
+
+
+Si la fonctio est préfixée par get_
+dans ce cas là elle n'affiche automatiquement le contenu
+
+ACF //permet des contenus supplémentaire dans mes champs. Adcanced custom fields. Un module qui permet d'ajouter des champs aux types de contenus. Donc on ne va pas utiliser pods. ACF est plus utilisé dans wordpress! 
+the_field('nomDuChamp') //affiche le champ custom
+get_field('nomDuChamp) // récupère la valeur du champ custom
