@@ -1,0 +1,62 @@
+@import 'variables';
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@for $i from 1 through 50 {
+    .card-container > .card:nth-child(#{$i}) {
+        animation-delay: $i*0.25s;
+    }
+}
+
+.form-container{
+    display: flex;
+    background-color: rgb(119, 96, 107);
+    padding: 50px ;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+
+
+.card-container {
+    position: relative;
+    .card {
+        background-color: white;
+        opacity: 0;
+        animation-timing-function: ease;
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        display: flex;
+        align-items: center;
+        border-radius: 3px;
+        box-shadow: 2px 2px 5px 2px #bbb;
+        margin-bottom: 10px;
+        font-family: $font-title;
+        color: $dark-blue;
+        transition: all 0.3s ease;
+        img {
+            margin: 5px;
+            height: 100px;
+            width: auto;
+        }
+        &:hover {
+            margin-left: 20px;
+        }
+    }
+}
+
+.pagination-container{
+    background-color: rgb(119, 96, 107);
+    color: white;
+    text-decoration: none;
+}

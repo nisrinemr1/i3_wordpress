@@ -1,0 +1,45 @@
+-- Créationd d'un theme--
+
+-> wp-content-> themes->[nomDeVotreTheme(tout en minuscule)]-> 3fichiers
+    -style.css(pour la configuration de votre thème)
+    -functions.php (pour définir la logique de votre thème.)
+    -index.php (template par défaut (fallback template))
+
+-> Pour la configs -> les commentaires du fichiers style.css vont définir la configuration. 
+    -> ATTENTION CE commentaire doit absolument être placé à la première ligne. 
+    NE RIEN AJOUTER AUTRE DANS LE COMMENTAIRE !!!! 
+
+
+Si on créer un fichier home.php dans myTheme, il va être prioritaire! 
+
+
+
+-- La hierarchie des templates! -- 
+
+-> L'ordre de priorité d'affichage des template est déterminé par rapport: 
+    -au type de la page
+    -nom du fichier 
+    par exemple : pour la page d'acceuil, le fichier fontpage.php sera prioritaire que home.php qui sera prioritaire sur index.php
+    Pour une page d'article: 
+        single.php qui sera prioritaire par rapport a singular.php qui sera prioritaire par rapport à index.php
+
+-> partie du template 
+    -header.php (header par défaut du thème)
+    -footer.php (footer par default)
+    -comments.php (les commentaire par défault du theme)
+    -sidebar.php (le template de la side bar)
+
+-> fonctions wordpress 
+    -bloginfo('') permet d'afficher les information du site
+        ex: bloginfo('name') -> affiche le titre du site
+    -wp_title('-') affichele titre de la page // le paramètre permet de définir un séparateur.
+    -get_header() -> inclure le fichier header.php
+    -get_footer() -> inclure le fichier footer.php
+    -wp_header() permet d'ajouter nos feuilles de styles ainsi que les feuilles de style de wp
+    -wp_footer() permet d'ajouter nos scripts js dans le footer, mais en plus de cela des scripts js de wordpress! 
+    -get_stylesheet_directory_uri() recup le chemin complet du dossier du theme
+    -register_nav_menus
+    
+
+La page projet devien la page des articles. Dans reglage après la page d'acceuil on met projet et on l'ajout dans la personnalisation des menu.
+Si ça n'affiche pas, c'est parce qu'on a rien encore mit dans la page du projet qui est dans l'index

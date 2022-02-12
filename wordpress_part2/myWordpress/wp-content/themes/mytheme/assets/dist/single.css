@@ -1,0 +1,47 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  color: black;
+}
+.container .left {
+  width: 80%;
+  text-decoration: none;
+}
+.container .right {
+  width: 20%;
+  text-decoration: none;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+.card-container .card {
+  width: 100%;
+  margin-bottom: 25px;
+  border: 1px solid white;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  color: black;
+}
+.card-container .card h3 {
+  font-weight: bold;
+}
+.card-container .card img {
+  width: 100%;
+  height: auto;
+  /* pour garder les proportion */
+}
+.card-container .card .card-title {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=single.css.map */
